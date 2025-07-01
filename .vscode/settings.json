@@ -1,12 +1,12 @@
 {
     "java.project.sourcePaths": [
-        ".",
-        "BINNARY-TREE",
         "BASICS",
         "BINNARY-SEARCH",
-        "STRINGS",
+        "BIT-MANUPULATION",
+        "DYNAMIC-PROGRAMMING",
         "HASH-TABLE",
-        "DYNAMIC-PROGRAMMING"
+        "STRINGS",
+        "BINNARY-TREE"
     ],
     "java.project.referencedLibraries": []
 }
