@@ -1,4 +1,4 @@
-# H1 Leet code question
+#  Leet code question
 1. BASICS
 2. BINNARY-SEARCH
 3. BINNARY-TREE
