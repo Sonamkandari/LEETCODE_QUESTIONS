@@ -7,7 +7,7 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
-public class Codec {
+public class solution {
     private static final String NULL = "X";
     private static final String SEP = ",";
 
