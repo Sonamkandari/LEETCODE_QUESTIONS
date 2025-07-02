@@ -6,7 +6,10 @@
         "DYNAMIC-PROGRAMMING",
         "HASH-TABLE",
         "STRINGS",
-        "BINNARY-TREE"
+        "BINNARY-TREE",
+        "BINNARY-TREE\\CONSTRUCTION_PROBLEMS",
+        "BINNARY-TREE\\HEIGHT_RELATED_PROBLEMS",
+        "BINNARY-TREE\\TRAVERSAL_PROBLEMS"
     ],
     "java.project.referencedLibraries": []
 }
