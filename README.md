@@ -14,8 +14,8 @@
    3. TRAVERSAL PROBLEMS
 5. BIT-MANUPULATION
 6. DYNAMIC-PROGRAMMING
-   1. Memoization
-   2. Tabulation Method
+   1. Memoization ->Top Down Approach
+   2. Tabulation Method ->Bottum Approach
 8. GRAPH PROBLEMS
 9. HASH-TABLE
 10. STRINGS
