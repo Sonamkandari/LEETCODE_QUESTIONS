@@ -1,0 +1,24 @@
+class Solution {
+    public int tribonacci(int n) {
+        if(n==0){
+            return 0;
+        }
+        if(n==1||n==2) return 1;
+
+        return tribonacci(n-1)+tribonacci(n-2)+tribonacci(n-3);
+    }
+}
+
+
+
+
+//                              tribonacci(5)
+//                          /         |         \
+//              ------------   ------------   ------------
+//             /           |         \                      \
+//    tribonacci(4)   tribonacci(3)   tribonacci(2)
+//      / | \               / | \               |
+//     /  |  \             /  |  \              |
+//   T(3) T(2) T(1)    T(2) T(1) T(0)         returns 1
+//    |    |    |       |    |    |
+//    2    1    1       1    1    0
