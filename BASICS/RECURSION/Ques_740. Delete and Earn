@@ -1,0 +1,40 @@
+class Solution {
+    
+    public int deleteAndEarn(int[] nums) {
+        if(nums==null || nums.length==0){
+            return 0;
+        }
+        int maxVal=0;
+        //extracting values from nums array 
+        // finding the maximum value first
+        for(int num:nums){
+            maxVal=Math.max(maxVal,num);
+
+        }
+      //creating a points array
+        int[] points = new int[maxVal + 1];
+        for(int num:nums){
+            points[num]+=num;
+
+        }
+
+        return helper(points,maxVal);
+        
+    }
+
+    //create a helper function
+    private int helper(int[]points,int i){
+        if(i<0){
+            return 0;
+        }
+        if(i==0){
+            
+            return 0;
+        }
+        // condition 1 if choosed a number i so i-1 will be not picked
+        int notTake=helper(points,i-1);
+        //the numbers from array which can be picked 
+        int take=points[i]+helper(points,i-2);
+        return Math.max(notTake,take);
+    }
+}
