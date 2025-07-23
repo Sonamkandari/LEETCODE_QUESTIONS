@@ -1,0 +1,37 @@
+class Solution {
+   // Approach used here two pointers approach 
+    public int maximumUniqueSubarray(int[] nums) {
+        int n=nums.length;
+        int i=0;
+        int j=0;
+
+        int currentSum=0;
+        int maximumScore=0;
+
+          // Using a  HashSet here  because it stores only unique values
+        HashSet<Integer>set=new HashSet<>();
+
+           //We use a while loop because both i and j move independently, and j++ doesn't happen every time  
+        while(j<nums.length){ 
+            //here we  have to check first is nums of array contain j already or not
+            if(!set.contains(nums[j])){
+                set.add(nums[j]);
+                //here i am maintaining a current sum
+                currentSum+=nums[j];
+               maximumScore=Math.max(currentSum,maximumScore);
+                j++;
+
+                //if already in the array remove num[i];
+            }else {
+                set.remove(nums[i]);
+                currentSum-=nums[i];
+                i++;
+            }
+        
+
+        }
+
+        return maximumScore;
+        
+    }
+}
