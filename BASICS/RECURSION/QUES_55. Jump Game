@@ -1,0 +1,33 @@
+
+   //Recursive approch  
+class Solution {
+    public boolean canJump(int[] nums) {
+        //calli g the funtion
+       return  CanReach(nums,0);
+       
+           
+        
+    }
+    //creating a helper function
+    boolean CanReach(int[]nums,int index){
+        //creating a base case 
+        if(index>=nums.length-1){
+            return true;
+        }
+         int max=nums[index];
+
+        for(int step=1;step<=max;step++){
+            if( CanReach(nums,index+step)){
+                return true;
+            }
+        }
+        return false;
+    }
+// this Approach is giving  TLE because Each time our method jump from 1 up to nums[index ]
+
+//This means it recomputes the same positions many times, resulting in huge redundancy and causing time limit exceeded (TLE) on large test cases 
+
+//time complexity is O(n^n)
+
+
+}
