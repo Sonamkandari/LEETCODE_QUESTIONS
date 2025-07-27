@@ -1,0 +1,26 @@
+class Solution {
+    public List<Integer> minSubsequence(int[] nums) {
+        // creating a array list
+      int   leftsum=0;
+      int  rightsum=0;
+        List<Integer>result=new ArrayList<>();
+        Arrays.sort(nums);
+        int totalsum=0;
+
+        for(int num:nums){
+            totalsum+=num;
+        }
+        int subseqSum=0;
+
+   for(int i=nums.length-1;i>=0;i--){
+       subseqSum+=nums[i];
+       result.add(nums[i]);
+       if(subseqSum>totalsum-subseqSum){
+        break;
+       }
+
+     }
+     return result;
+        
+    }
+}
