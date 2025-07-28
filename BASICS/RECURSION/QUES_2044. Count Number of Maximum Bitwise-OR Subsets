@@ -1,0 +1,30 @@
+class Solution {
+    public int countMaxOrSubsets(int[] nums) {
+        int maxOr=0;
+        for(int numbers:nums){
+            maxOr|=numbers; //take or of every number 
+        }
+        int currOr=0;
+        //call count subSet
+         return countSubsets(0,currOr,nums,maxOr);
+    }
+
+    //creating the helper functio for countMaxOrSubset
+    int countSubsets(int idx,int currOr,int[]nums,int maxOr){
+        //base case 
+        if(idx==nums.length){
+            if(currOr==maxOr){
+                return 1;
+            }
+            return 0;
+           
+        }
+
+        //takes number of index 
+        int takeCount=countSubsets(idx+1,currOr| nums[idx],nums,maxOr);
+        //or not take nums of index 
+        int notTakeCount=countSubsets(idx+1,currOr,nums,maxOr);
+
+        return takeCount+notTakeCount;
+    }
+}
