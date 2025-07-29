@@ -1,0 +1,54 @@
+class Solution {
+    public int maximumGain(String s, int x, int y) {
+        if(x>y){
+            return removePairs(s,"ab",x,y);
+        }else{
+            return removePairs(s,"ba",y,x);
+        }
+
+        
+    }
+
+    // creating a helper function for removing the pairs
+    private int removePairs(String s,String pattern, int high,int low){
+        int score=0;
+        StringBuilder input=new StringBuilder();
+        for(char ch:s.toCharArray()){
+            input.append(ch);
+            //for pattern 'ab'
+            // minmum langth can be 2 because patterns can be either 'ab' or either 'ba' 
+
+            int length=input.length();
+            if(input.length()>=2 && input.charAt(length-1)==pattern.charAt(1)&&input.charAt(length-2)==pattern.charAt(0)){
+                score+=high;
+                // since we find the pattern so hide the last two characters or removed the characters matching with patterns
+                input.setLength(length-2);
+            }
+
+        }
+
+        // now itrating for  pattern  'ba' which has low value
+        // but this time we are not taking the original string we are checking in the remainig String which means in the input string 
+       StringBuilder remainingString=new StringBuilder();
+        for(char ch :input.toString().toCharArray()){ // note input is not a string it is stringbuilder to covert it into String
+            remainingString.append(ch);
+
+        int length2=remainingString.length();    
+         //for pattern ba
+         //minimum length will be 2 because pattern can be either 'ba' or 'ab'
+         if(remainingString.length()>=2 && remainingString.charAt(length2-1)==pattern.charAt(0) && remainingString.charAt(length2-2)==pattern.charAt(1)){
+           // update the score
+           score+=low;
+           // since we find the pattern hide the last two characters or remove the charcaters matching with pattern
+            remainingString.setLength(length2-2);
+
+
+         }
+
+        }
+
+        return score;
+
+
+    }
+}
