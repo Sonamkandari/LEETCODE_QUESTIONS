@@ -1,0 +1,54 @@
+//Brute force Approach
+class Solution {
+    public void setZeroes(int[][] matrix) {
+        int n=matrix.length;
+        int m=matrix[0].length;
+        //traversing the complete rows
+        for(int i=0;i<n;i++){
+        //traversing the  complete columns
+        for(int j=0;j<m;j++){
+            //if elements of a 2D matrix is equal to zero 
+            if(matrix[i][j]==0){
+                //marking that complete row as -1
+                markRow(i,matrix,m);
+                //marking that comlete columns as -1
+                markColumns(j,matrix,n);
+
+            }   
+          }
+        }
+
+        //travesing the  array again and if the array contains negative elements in the array marked it as zero
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                if(matrix[i][j]==-1){
+                    matrix[i][j]=0;
+
+                }
+            }
+        }
+        
+    }
+
+    //creating a helper fuction for marking all the rows -1
+   public void markRow(int row ,int[][]matrix,int m){
+
+    for(int i=0;i<m;i++){
+        if(matrix[row][i]!=0){
+            matrix[row][i]=-1;
+        }
+    }
+
+   }
+
+    //creating a helper function for marking all the columns -1
+    public void markColumns(int colns ,int[][]matrix,int n){
+        for(int j=0;j<n;j++){
+            if(matrix[j][colns]!=0){
+                matrix[j][colns]=-1;
+            }
+        }
+
+    }
+
+}
