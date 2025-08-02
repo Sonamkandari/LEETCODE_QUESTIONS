@@ -1,0 +1,35 @@
+//Brute force Approach
+// public int maxSubArray(int[] nums) {
+//     int maxSum = Integer.MIN_VALUE;
+
+//     for (int start = 0; start < nums.length; start++) {
+//         int currentSum = 0;
+//         for (int end = start; end < nums.length; end++) {
+//             currentSum += nums[end];
+//             if (currentSum > maxSum) {
+//                 maxSum = currentSum;
+//             }
+//         }
+//     }
+
+//     return maxSum;
+// }
+
+//optimize solution 
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int sum=0;
+        int maxSum = Integer.MIN_VALUE;
+        for(int i=0;i<nums.length;i++){
+         // if sum is negative reset sum value to 0
+            sum+=nums[i];
+            maxSum=Math.max(maxSum,sum);
+            if(sum<0){
+                sum=0;
+            }
+            
+        }
+         return maxSum;
+    }
+   
+}
