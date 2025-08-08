@@ -1,0 +1,40 @@
+class Solution {
+     //creating four operations
+        int[][]operations ={
+            {100,0},
+            {75,25},
+            {50,50},
+            {25,75},
+        };
+        
+    public double soupServings(int n) {
+        return pour(n,n);
+       
+        
+    }
+    //creating a helper function for pouring recursively
+    public double pour(int a,int b){
+        //for if a and b both get finished
+        if(a<=0 && b<=0){
+            return 0.5*1;
+        }
+        //for case 2 if a get finished
+        if(a<=0){
+            return 1.0;
+        }
+        // for case third if b get finished first
+        if(b<=0){
+            return 0.0;
+        }
+         double prob=0.0;
+        //iterate all the operation one by one
+        for(int[]operation:operations){
+            int leftA=a-operation[0];
+            int leftB=b-operation[1];
+            prob+=pour(leftA,leftB);
+
+        }
+        return 0.25*prob;
+
+    }
+}
