@@ -1,0 +1,40 @@
+//using a better  and Optimize Approach 
+//using two pointer Approach
+//time complexity - O(n^2)
+// space Complexity - O(n)
+class Solution {
+    public int threeSumClosest(int[] nums, int target) {
+        int n=nums.length;
+        //sorting the array
+        Arrays.sort(nums);
+        //keep the track of resultsum
+        int resultsum=nums[0]+nums[1]+nums[2];
+        int minDifferennce=Integer.MAX_VALUE;
+
+        for(int i=0;i<n;i++){
+            int left=i+1;
+            int right=nums.length-1;
+            while(left<right){
+                int sum=nums[i]+nums[left]+nums[right];
+                if(sum==target){
+                    return target;
+                }
+                if(sum<target){
+                    left++;
+                }else{
+                    right--;
+                }
+
+                int differenceToTarget=Math.abs(sum-target);
+                if( differenceToTarget<minDifferennce){
+                    resultsum=sum;
+                  minDifferennce= differenceToTarget;
+                }
+            }
+
+        }
+        return resultsum;
+
+        
+    }
+}
