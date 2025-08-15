@@ -1,15 +1,16 @@
 {
     "java.project.sourcePaths": [
-        "BASICS",
-        "BINNARY-SEARCH",
-        "BIT-MANUPULATION",
-        "DYNAMIC-PROGRAMMING",
-        "HASH-TABLE",
         "STRINGS",
+        "HASH-TABLE",
+        "DYNAMIC-PROGRAMMING",
+        "BIT-MANUPULATION",
+        "BINNARY-TREE/TRAVERSAL_PROBLEMS",
+        "BINNARY-TREE/HEIGHT_RELATED_PROBLEMS",
+        "BINNARY-TREE/CONSTRUCTION_PROBLEMS",
         "BINNARY-TREE",
-        "BINNARY-TREE\\CONSTRUCTION_PROBLEMS",
-        "BINNARY-TREE\\HEIGHT_RELATED_PROBLEMS",
-        "BINNARY-TREE\\TRAVERSAL_PROBLEMS"
+        "BINNARY-SEARCH",
+        "BASICS",
+        "2D_MATRIX"
     ],
     "java.project.referencedLibraries": []
 }
