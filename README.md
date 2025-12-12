@@ -24,5 +24,4 @@
 10. STRINGS
 11. kadane's Algorithm
 
-56.3456bgghgfhgfnfg
-12.ghhhh
+12.yeah hai masti
