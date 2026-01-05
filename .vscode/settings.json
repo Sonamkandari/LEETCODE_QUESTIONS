@@ -10,7 +10,8 @@
         "BINNARY-TREE",
         "BINNARY-SEARCH",
         "BASICS",
-        "2D_MATRIX"
+        "2D_MATRIX",
+        "Recursion"
     ],
     "java.project.referencedLibraries": []
 }
