@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CRUD",
+            "request": "launch",
+            "mainClass": "CRUD",
+            "projectName": "LEETCODE_QUESTIONS_cb017efd"
+        },
+        {
+            "type": "java",
             "name": "linear_serch",
             "request": "launch",
             "mainClass": "linear_serch",

@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "STRINGS",
+        "Recursion",
         "HASH-TABLE",
         "DYNAMIC-PROGRAMMING",
         "BIT-MANUPULATION",
@@ -11,7 +12,7 @@
         "BINNARY-SEARCH",
         "BASICS",
         "2D_MATRIX",
-        "Recursion"
+        "ARRAY/BASIC_ARRAY_QUES"
     ],
     "java.project.referencedLibraries": []
 }
