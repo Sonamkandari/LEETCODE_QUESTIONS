@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Zig_zag_feshion",
+            "request": "launch",
+            "mainClass": "Zig_zag_feshion",
+            "projectName": "LEETCODE_QUESTIONS_cb017efd"
+        },
+        {
+            "type": "java",
+            "name": "Reverse_Array",
+            "request": "launch",
+            "mainClass": "Reverse_Array",
+            "projectName": "LEETCODE_QUESTIONS_cb017efd"
+        },
+        {
+            "type": "java",
             "name": "CRUD",
             "request": "launch",
             "mainClass": "CRUD",
